@@ -1,19 +1,16 @@
 import './App.css';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
-import Tours from './Components/Tours/Tours';
-
-
-
+import TourDetails from './Components/TourDetails/TourDetails';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-    <Home/>
-             
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/city/:id" element={<TourDetails />} />
+      </Routes>
 
-    
     </>
   );
 }
